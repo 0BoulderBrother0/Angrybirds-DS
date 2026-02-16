@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   zebra: {fileID: 1898189295396814751, guid: 2532f83f629c8b44bb90c809f5daf4a2, type: 3}
+  throwSpeed: {x: 20, y: 10}
 --- !u!4 &1577244051
 Transform:
   m_ObjectHideFlags: 0
