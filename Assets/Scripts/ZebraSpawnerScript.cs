@@ -3,7 +3,10 @@ using UnityEngine;
 public class ZebraSpawnerScript : MonoBehaviour
 {
     public GameObject zebra;
-    public Vector2 throwSpeed;
+    public float throwSpeed;
+
+    public float maxVelocity;
+    bool isDragging;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,14 +17,26 @@ public class ZebraSpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0) && isDragging)
         {
-            Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            isDragging = false;
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Gör om pixlarnas koordinater som täcker skärmen för nuvarande cameran i scenen till unity:s rut system koordinater
-            newPosition.z = 0;
+            mousePosition.z = 0;
 
-            GameObject newParrot = Instantiate(zebra, newPosition, Quaternion.identity);
-            newParrot.GetComponent<Rigidbody2D>().linearVelocity = throwSpeed;
+            Vector2 throwVelocity = (transform.position - mousePosition) * throwSpeed;
+            if (throwVelocity.magnitude > maxVelocity)
+            {
+                throwVelocity = throwVelocity.normalized * maxVelocity;
+            }
+
+            GameObject newParrot = Instantiate(zebra, transform.position, Quaternion.identity);
+            newParrot.GetComponent<Rigidbody2D>().linearVelocity = throwVelocity;
         }
+    }
+
+    private void OnMouseDown()
+    {
+        isDragging = true;
     }
 }
