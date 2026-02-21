@@ -30,7 +30,7 @@ public class ZebraSpawnerScript : MonoBehaviour
                 throwVelocity = throwVelocity.normalized * maxVelocity;
             }
 
-            GameObject newParrot = Instantiate(zebra, transform.position, Quaternion.identity);
+            GameObject newParrot = Instantiate(zebra, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             newParrot.GetComponent<Rigidbody2D>().linearVelocity = throwVelocity;
         }
     }

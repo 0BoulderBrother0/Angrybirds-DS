@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8318265837585734919}
   - component: {fileID: 6428641482813837886}
   - component: {fileID: -6325903668832553437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: elementWood_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05

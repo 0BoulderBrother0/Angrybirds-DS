@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneScript : MonoBehaviour
 {
+
+    public string newLevel = "";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,5 +21,10 @@ public class ChangeSceneScript : MonoBehaviour
     public void ChangeScene(string newScene)
     {
         SceneManager.LoadScene(newScene);
+    }
+
+    public void ChangeSceneToSavedLevel()
+    {
+        SceneManager.LoadScene(newLevel);
     }
 }

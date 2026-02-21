@@ -258,7 +258,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4281014150456151164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5631140145330523764}
+        m_TargetAssemblyTypeName: ChangeSceneScript, Assembly-CSharp
+        m_MethodName: ChangeSceneToSavedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5631140145330523764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,3 +283,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e96bfa23b24e249bdf2e9d826aae05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneScript
+  newLevel: 
