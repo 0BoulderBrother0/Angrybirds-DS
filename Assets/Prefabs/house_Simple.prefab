@@ -46,10 +46,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: elementWood_Long
       objectReference: {fileID: 0}
-    - target: {fileID: 6168075431509269998, guid: 9cbb8c6d59d7a43488ade33ecccc01d5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7409277817756954618, guid: 9cbb8c6d59d7a43488ade33ecccc01d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -112,10 +108,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: elementWood (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6692120862761936482, guid: fdd3a75f760671c4099bdd58964fa2ac, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8377003323342062738, guid: fdd3a75f760671c4099bdd58964fa2ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -177,10 +169,6 @@ PrefabInstance:
     - target: {fileID: 6692120862761936482, guid: fdd3a75f760671c4099bdd58964fa2ac, type: 3}
       propertyPath: m_Name
       value: elementWood
-      objectReference: {fileID: 0}
-    - target: {fileID: 6692120862761936482, guid: fdd3a75f760671c4099bdd58964fa2ac, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8377003323342062738, guid: fdd3a75f760671c4099bdd58964fa2ac, type: 3}
       propertyPath: m_LocalPosition.x

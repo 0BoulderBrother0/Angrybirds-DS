@@ -3,21 +3,26 @@ using UnityEngine;
 public class ZebraSpawnerScript : MonoBehaviour
 {
     public GameObject zebra;
+    public GameObject[] shots;
     public float throwSpeed;
+    int shotsIndex;
 
     public float maxVelocity;
     bool isDragging;
 
+    GameUiScript gameUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameUI = GameObject.FindGameObjectWithTag("GameUI").GetComponent<GameUiScript>();
+        gameUI.SetZebrasLeft(shots.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && isDragging)
+        if (Input.GetMouseButtonUp(0) && isDragging && shotsIndex < shots.Length)
         {
             isDragging = false;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -30,7 +35,9 @@ public class ZebraSpawnerScript : MonoBehaviour
                 throwVelocity = throwVelocity.normalized * maxVelocity;
             }
 
-            GameObject newParrot = Instantiate(zebra, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            GameObject newParrot = Instantiate(shots[shotsIndex], new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            shotsIndex++;
+            gameUI.SetZebrasLeft(shots.Length - shotsIndex);
             newParrot.GetComponent<Rigidbody2D>().linearVelocity = throwVelocity;
         }
     }
