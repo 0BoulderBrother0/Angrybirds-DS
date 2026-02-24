@@ -16,7 +16,7 @@ TagManager:
   - Border
   - Ground
   - Entities
-  - 
+  - Background
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1581811313
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
