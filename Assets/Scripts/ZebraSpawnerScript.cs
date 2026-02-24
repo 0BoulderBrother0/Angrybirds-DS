@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class ZebraSpawnerScript : MonoBehaviour
 {
-    public GameObject zebra;
     public GameObject[] shots;
     public float throwSpeed;
-    int shotsIndex;
+    int shotsIndex = 0;
 
     public float maxVelocity;
     bool isDragging;
@@ -16,7 +15,6 @@ public class ZebraSpawnerScript : MonoBehaviour
     void Start()
     {
         gameUI = GameObject.FindGameObjectWithTag("GameUI").GetComponent<GameUiScript>();
-        gameUI.SetZebrasLeft(shots.Length);
     }
 
     // Update is called once per frame
@@ -37,9 +35,9 @@ public class ZebraSpawnerScript : MonoBehaviour
 
             GameObject newParrot = Instantiate(shots[shotsIndex], new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             shotsIndex++;
-            gameUI.SetZebrasLeft(shots.Length - shotsIndex);
             newParrot.GetComponent<Rigidbody2D>().linearVelocity = throwVelocity;
         }
+        gameUI.SetZebrasLeft(shots.Length - shotsIndex);
     }
 
     private void OnMouseDown()
