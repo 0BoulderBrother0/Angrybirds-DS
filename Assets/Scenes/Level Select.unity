@@ -672,7 +672,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 70}
+  m_CellSize: {x: 110, y: 70}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   button: {fileID: 4872488406733514570, guid: 2a16e7cff4e25e8468afc1580866f07f, type: 3}
-  NumberOfLevels: 1
+  NumberOfLevels: 5
 --- !u!1001 &962755909492204753
 PrefabInstance:
   m_ObjectHideFlags: 0

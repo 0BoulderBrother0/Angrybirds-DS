@@ -20,6 +20,7 @@ public class EnemyManagerScript : MonoBehaviour
         if (enemiesAlive == 0 && clearedLevel == false)
         {
             clearedLevel = true;
+            Utility.saveData[SceneManager.GetActiveScene().name] = "Cleared";
             Invoke("ReturnToLevelSelect", returnToLevelSelectDelay);
         }
     }
